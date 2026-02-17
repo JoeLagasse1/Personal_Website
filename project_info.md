@@ -55,10 +55,9 @@ This is a personal portfolio website for Joe Lagasse, a Senior Firmware Engineer
 - Expandable to full list (60+ total skills)
 - Tag-based visual design with cyan accents
 
-### 6. Projects Section
-- Grid of project cards
-- Each card has title, description, tech tags, and GitHub link
-- Hover effects for interactivity
+### 6. Projects Section (Not Yet Implemented)
+- Planned: Grid of project cards with title, description, tech tags, and GitHub links
+- Not currently in the site — placeholder for future addition
 
 ### 7. Education & Certifications
 - Side-by-side cards for education and certifications
@@ -108,8 +107,8 @@ z:\Apps\Personal_Website\
 │   └── style.css             # All styles (700+ lines)
 ├── js/
 │   └── main.js               # Interactive functionality
+├── headshot.jpg              # Profile photo (root directory)
 ├── images/
-│   ├── headshot.jpg          # Profile photo
 │   └── logos/                # Company logos
 │       ├── stm.svg
 │       ├── microchip.svg
@@ -170,7 +169,7 @@ z:\Apps\Personal_Website\
 - About Me: ✅ Rewritten and polished
 - Experience: ✅ Condensed with key highlights
 - Skills: ✅ Organized into categories with top items featured
-- Projects: ✅ Showcase portfolio work
+- Projects: ❌ Not yet implemented (planned feature)
 - Carousel: ✅ 7 companies featured with SVG placeholders
 
 ### 🎨 Design Status
