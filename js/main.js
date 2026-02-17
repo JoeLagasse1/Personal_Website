@@ -72,3 +72,35 @@ const observer = new IntersectionObserver(
 );
 
 fadeElements.forEach(el => observer.observe(el));
+
+// Show More/Less functionality
+const showMoreButtons = document.querySelectorAll('.show-more-btn');
+
+showMoreButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const card = button.closest('.skill-card, .experience-card');
+        const isExpanded = button.textContent.includes('Less');
+
+        // Get all items (both visible and hidden)
+        const allItems = card.querySelectorAll('.skill-tags span, .experience-list li');
+
+        // Determine how many items to keep visible
+        const visibleCount = button.dataset.target.includes('exp') ? 3 : 5;
+
+        if (isExpanded) {
+            // Collapse: hide items beyond the threshold
+            allItems.forEach((item, index) => {
+                if (index >= visibleCount) {
+                    item.classList.add('hidden');
+                }
+            });
+            button.textContent = button.dataset.target.includes('exp') ? 'Show More Details' : 'Show More';
+        } else {
+            // Expand: show all items
+            allItems.forEach(item => {
+                item.classList.remove('hidden');
+            });
+            button.textContent = button.dataset.target.includes('exp') ? 'Show Less' : 'Show Less';
+        }
+    });
+});
